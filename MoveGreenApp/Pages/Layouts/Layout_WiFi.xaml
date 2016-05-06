@@ -1,0 +1,19 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			 x:Class="MoveGreenApp.Layout_WiFi"
+			 Title="WiFi">
+	<ContentPage.Content>
+	<RelativeLayout>
+		
+		<Label Text = "Toggle WiFi"
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=10}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=10}"/>
+
+		<Switch
+				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-85}"
+				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=10}"/>
+
+	</RelativeLayout>
+	</ContentPage.Content>
+</ContentPage>
