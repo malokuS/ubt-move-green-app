@@ -1,19 +1,40 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
-<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
 			 xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
 			 x:Class="MoveGreenApp.Layout_WiFi"
 			 Title="WiFi">
 	<ContentPage.Content>
-	<RelativeLayout>
-		
-		<Label Text = "Toggle WiFi"
-				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=X, Factor=1, Constant=10}"
-				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=10}"/>
-
-		<Switch
-				RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant=-85}"
-				RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=1, Constant=10}"/>
-
-	</RelativeLayout>
+		<RelativeLayout
+		 HorizontalOptions = "FillAndExpand"
+		 VerticalOptions = "FillAndExpand"
+		 Padding="10, 30, 10, 10">
+			
+			  <Label Text="Are you Online?" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant = 10}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=40}" />
+			  <Image x:Name="onlineImg" Source="red_cross.png" HeightRequest="40" WidthRequest="40" 
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant = -50}" 
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=30}" />
+			  <Label Text="WiFi" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant = 10}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=90}" />
+			  <Image x:Name="wifiImg" Source="red_cross.png" HeightRequest="40" WidthRequest="40" 
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant = -50}" 
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=80}" />
+			  <Label Text="Cellular Data" RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant = 10}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=140}" />
+			  <Image x:Name="celImg" Source="red_cross.png" HeightRequest="40" WidthRequest="40" 
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=1, Constant = -50}" 
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=130}" />
+			  <Label Text="Connected to" 	x:Name="ParentText"
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0, Constant = 10}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=180}" />
+			  <Label x:Name="wifiText" Text="Connected to a wifi with a long name" LineBreakMode="WordWrap" HorizontalTextAlignment="Start"
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToView, ElementName=ParentText, Property=X, Factor=1, Constant = 120}"
+			  								RelativeLayout.WidthConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width,Factor=0.75,Constant=0}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Factor=0, Property=Y, Constant=180}"
+			  								RelativeLayout.HeightConstraint="{ConstraintExpression Type=RelativeToParent, Factor=1, Property=Height, Constant=50}" />
+			  <Button x:Name="refreshB" BorderColor="Transparent" BackgroundColor="Transparent" Image="refresh.png"	HeightRequest="128" WidthRequest="128" Clicked="OnRefreshBClicked"
+			  								RelativeLayout.XConstraint="{ConstraintExpression Type=RelativeToParent, Property=Width, Factor=0.5, Constant = -35}"
+			  								RelativeLayout.YConstraint="{ConstraintExpression Type=RelativeToParent, Property=Y, Factor=0, Constant = 250}" />
+		</RelativeLayout>
 	</ContentPage.Content>
 </ContentPage>

@@ -15,7 +15,7 @@
     <DebugType>full</DebugType>
     <Optimize>false</Optimize>
     <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
-    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;</DefineConstants>
+    <DefineConstants>DEBUG;ENABLE_TEST_CLOUD;__MOBILE__;__IOS__;</DefineConstants>
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
@@ -116,6 +116,12 @@
     <Reference Include="Xamarin.Forms.Maps">
       <HintPath>..\packages\Xamarin.Forms.Maps.2.2.0.31\lib\Xamarin.iOS10\Xamarin.Forms.Maps.dll</HintPath>
     </Reference>
+    <Reference Include="Plugin.Connectivity">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.1.2\lib\Xamarin.iOS10\Plugin.Connectivity.dll</HintPath>
+    </Reference>
+    <Reference Include="Plugin.Connectivity.Abstractions">
+      <HintPath>..\packages\Xam.Plugin.Connectivity.2.1.2\lib\Xamarin.iOS10\Plugin.Connectivity.Abstractions.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\MoveGreenApp\MoveGreenApp.csproj">
@@ -160,5 +166,10 @@
     <BundleResource Include="Resources\wifi.png" />
     <BundleResource Include="Resources\wifi%402x.png" />
     <BundleResource Include="Resources\wifi%403x.png" />
+    <BundleResource Include="Resources\green_tick.png" />
+    <BundleResource Include="Resources\red_cross.png" />
+    <BundleResource Include="Resources\green_tick%402x.png" />
+    <BundleResource Include="Resources\red_cross%402x.png" />
+    <BundleResource Include="Resources\refresh.png" />
   </ItemGroup>
 </Project>

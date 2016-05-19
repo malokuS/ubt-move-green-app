@@ -13,6 +13,7 @@
 	<uses-permission android:name="android.permission.ACCESS_MOCK_LOCATION" />
 	<uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
 	<uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+	<uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
 	<application android:label="MoveGreenApp">
 		<!-- Put your Google Maps V2 API Key here. -->
 		<meta-data android:name="com.google.android.geo.API_KEY" android:value="AIzaSyA5KR8sQ2fwJSsNCOIAi1UNJ47HxCI7s5s" />
