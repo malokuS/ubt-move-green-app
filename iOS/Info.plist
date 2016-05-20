@@ -57,5 +57,7 @@
 	<string>Using location is neccessary for app to work properly!</string>
 	<key>NSLocationWhenInUseUsageDescription</key>
 	<string>App is using your location.</string>
+	<key>UIRequiresPersistentWiFi</key>
+	<true/>
 </dict>
 </plist>

@@ -9,12 +9,14 @@ namespace MoveGreenApp
 {
 	public class MapPage : ContentPage
 	{
-		ControlLocation control = new ControlLocation();
+		WiFiManager wifiManager;
 
 		public MapPage ()
 		{
 			Title = "Move Green";
 			Icon = "map.png";
+
+			wifiManager = new WiFiManager ();
 
 			Image iconImg = new Image{
 				WidthRequest = 120,
@@ -42,11 +44,27 @@ namespace MoveGreenApp
 			};
 
 			drawableMapButton.Clicked += (object sender, EventArgs e) => {
-				Navigation.PushAsync(new DrawableMapPage());
+				wifiManager.RefreshConnectionStatus();
+				if(wifiManager.getConnectionStatus())
+				{
+					Navigation.PushAsync(new DrawableMapPage());
+				}
+				else
+				{
+					this.DisplayAlert("No Internet Connection!", "Please check your internet connection and try again.", "OK");
+				}
 			};
 
 			directionsMapButton.Clicked += (object sender, EventArgs e) => {
-				Navigation.PushAsync(new DirectionsMapPage());
+				wifiManager.RefreshConnectionStatus();
+				if(wifiManager.getConnectionStatus())
+				{
+					Navigation.PushAsync(new DirectionsMapPage());
+				}
+				else
+				{
+					this.DisplayAlert("No Internet Connection!", "Please check your internet connection and try again.", "OK");
+				}
 			};
 		}
 	}

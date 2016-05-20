@@ -13,7 +13,8 @@ using Plugin.Permissions;
 
 namespace MoveGreenApp.Droid
 {
-	[Activity (Label = "Move Green App", Icon = "@drawable/app_icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+	[Activity (Label = "Move Green App", Icon = "@drawable/app_icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation,
+			   ScreenOrientation = ScreenOrientation.Portrait)]
 	public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
 	{
 		protected override void OnCreate (Bundle bundle)
